@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2.8.4</title>
+</head>
+<body>
+    <h3><b>Here's a code that asks the user for two numbers and shows their sum.
+        <br>
+        It works incorrectly. The output in the example below is 12 (for default prompt values).
+        <br>
+        Why? Fix it. The result should be 3.</b></h3>
+    <p>let a = prompt("First number?", 1);</p>
+    <p>let b = prompt("Second number?", 2);</p>
+    <p>alert(a + b); // 12</p>
+
+    <p>The ans to why is :<br><br>
+    The variables both "a and "b" are of string datatype that is why <br>
+    the "+" is woeking a concatenate instead of add operator</p>
+    <p>These are the correct option</p>
+    <p>alert(+a + +b); // or Number(a) + Number(b)</p>
+</body>
+<script src="2_8_4.js"></script>
+</html>
