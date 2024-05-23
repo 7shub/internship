@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4_4_1</title>
+</head>
+<body>
+    <h2><b>Here the function makeUser returns an object.What is the result of accessing its ref? Why?</b></h2>
+    <pre>
+        function makeUser() {
+        return {
+            name: "John",
+            ref: this
+        };
+        }
+
+        let user = makeUser();
+
+        alert( user.ref.name );
+
+        the result will be an error as the 
+    </pre>
+</body>
+<script src="4_4_1.js"></script>
+</html>
