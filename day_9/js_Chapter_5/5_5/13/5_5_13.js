@@ -4,12 +4,18 @@ let users = [
     {id: 'pete', name: "Pete Peterson", age: 31},
     ];
     function groupById(arr){
-        let user = users.map(item=> 
-            {
-                return {[item.id]:item}
-            });
-        return user;
+        return arr.reduce(function(acc, item) {
+            acc[item.id] = item;
+            return acc;
+            }, {});
     }
 
     let usersById = groupById(users);
-    console.log(JSON.stringify(usersById))
+console.log(JSON.stringify(usersById))
+/*let user=new Object();
+        arr.forEach((item,ind)=> 
+            {
+                user[item.id]=item;
+                console.log(JSON.stringify(user))
+            });
+            return user;*/ 
