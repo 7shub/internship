@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 5_3</title>
+</head>
+<body>
+    <h3><b>We have a cost in the form "$120". That is: the dollar sign goes first, and then the number.</b></h3>
+    <pre>
+        Create a function extractCurrencyValue(str) that would extract the numeric value from such string and return it.
+        The example:
+        alert( extractCurrencyValue('$120') === 120 ); // true
+    </pre>
+</body>
+<script src="5_3_4.js"></script>
+</html>const obj = {
+    a: 5,
+    b: {
+        c: 4,
+    }
+}
+
+const obj2 = structuredClone(obj)
+obj2.b.c = 9;
+obj2.a = 9;
+
+console.log(JSON.stringify(obj))
