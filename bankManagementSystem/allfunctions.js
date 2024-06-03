@@ -11,7 +11,7 @@ let bank ={
                                     "name":uname,
                                     "accountType":accType,
                                     "balance":+balance,})
-        alert(`Enjoy your account has been created`); }
+        alert(`Enjoy your account has been created`+accNo); }
     },
     deposited(){
         let accNo = prompt(`Enter the account number in which you want deposit the money:-`);
@@ -83,7 +83,7 @@ let bank ={
 
     closeAccount(){
         let accNo = prompt(`Enter the account number you want to close:-`);
-        let a=this.arrOfUsers.find(item => item["accountNumber"] == accNo);
+        let a=this.arrOfUsers.findIndex(item => item["accountNumber"] == accNo);
         if( a!= undefined){
             delete a;
             }
@@ -92,5 +92,49 @@ let bank ={
         }
     }
 }
+let exit = false;
+while(!exit)
+    {
+    let count = prompt(`enter a number the represented number to access the bank\n 
+                        1:-Create account\n
+                        2:-Deposit money\n
+                        3:-Withdraw\n
+                        4:-ShowBalance\n
+                        5:-SeeAllUsers\n
+                        6:-SeeAllUsersByType\n
+                        7:-CloseAccount\n
+                        8:-Exit`);
+    
+switch (count) {
+    case 1:
+        bank.createAcc()
+        break;
+    case 2:
+        bank.deposited()
+        break;
+    case 3:
+        bank.Withdraw()
+        break;
+    case 4:
+        bank.showBalance()
+        break;
+    case 5:
+        bank.seeAllUsers()
+        break;
+    case 6:
+        bank.seeAllUsersByType()
+        break;
+    case 7:
+        bank.closeAccount()
+        break;
+    case 8:
+        exit=true;
+        break;
+    default:                    
+        alert(JSON.stringify(bank.arrOfUsers))
+    }
 
-        
+    }
+
+
+
